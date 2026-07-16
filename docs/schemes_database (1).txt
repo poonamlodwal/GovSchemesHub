@@ -1,0 +1,80 @@
+================================================================================
+GOVERNMENT SCHEMES DATABASE (STRUCTURAL TEXT FORMAT FOR CODE PARSING)
+================================================================================
+
+SCHEME_NAME: Central Sector Scheme of Scholarship for College and University Students
+ELIGIBILITY_CRITERIA:
+  - Must be an Indian citizen.
+  - Students who are above 80th percentile of successful candidates in the relevant stream from the respective Board of Examination in Class XII.
+  - Pursuing regular courses (not correspondence or distance mode) in regular colleges/medical colleges/engineering colleges recognized by AICTE/UGC.
+  - Family income from all sources must not exceed INR 4.5 Lakhs per annum.
+  - Must not be receiving any other scholarship or stipend.
+LAST_DATE_TO_APPLY: 2026-10-31
+DOCUMENTS_NEEDED:
+  - Aadhaar Card (Primary Identity Proof)
+  - Class 12th Marksheet / Passing Certificate
+  - Income Certificate issued by an authorized government official
+  - Bonafide Student Certificate issued by the current College/University
+  - Active Bank Account Passbook copy (must be seeded with Aadhaar Card)
+  - Category Certificate (SC/ST/OBC), if applicable
+--------------------------------------------------------------------------------
+
+SCHEME_NAME: Post Matric Scholarship Scheme for Scheduled Castes (PMS-SC)
+ELIGIBILITY_CRITERIA:
+  - Must be an Indian citizen belonging to the Scheduled Caste (SC) category.
+  - Must be pursuing post-matriculation or post-secondary courses in a recognized institution.
+  - Total annual family income from all sources must not exceed INR 2.5 Lakhs per annum.
+LAST_DATE_TO_APPLY: 2026-12-31
+DOCUMENTS_NEEDED:
+  - Valid Caste Certificate issued by competent revenue authority
+  - Income Certificate for the current financial year
+  - Academic marksheets of the last qualifying examination
+  - Fee Receipt of the current academic year
+  - Aadhaar Card
+  - Passbook copy of the student's personal bank account
+--------------------------------------------------------------------------------
+
+SCHEME_NAME: Prime Minister's Research Fellowship (PMRF)
+ELIGIBILITY_CRITERIA:
+  - Must have completed or be in the final year of B.Tech/Integrated M.Tech/Integrated M.Sc/M.Sc from IISc, IITs, NITs, IISERs, or IIITs.
+  - Must have secured a CGPA/CPI of at least 8.0 on a 10-point scale (or equivalent).
+  - Alternatively, applicants from other recognized universities must have a GATE score of 650 or above and a CGPA of 8.0 or above.
+  - Must be accepted/selected into a Ph.D. program at one of the PMRF granting institutions.
+LAST_DATE_TO_APPLY: 2026-09-15
+DOCUMENTS_NEEDED:
+  - Academic Transcripts & Graduation Degrees (UG and PG as applicable)
+  - Valid GATE Scorecard (if applicable)
+  - Comprehensive Research Proposal (Abstract & Statement of Purpose)
+  - Digital Passport size photograph and Signature
+  - At least two Letters of Recommendation (LoR)
+--------------------------------------------------------------------------------
+
+SCHEME_NAME: Startup India Seed Fund Scheme (SISFS)
+ELIGIBILITY_CRITERIA:
+  - A startup must be recognized by the Department for Promotion of Industry and Internal Trade (DPIIT).
+  - Incorporated not more than 2 years ago at the time of application.
+  - The startup must have a business idea, prototype product, or a service with a market fit, viable commercialization plan, and scope of scaling.
+  - Startup should not have received more than INR 10 Lakhs of monetary support under any other Central or State Government scheme.
+LAST_DATE_TO_APPLY: Rolling Basis (Open Throughout 2026)
+DOCUMENTS_NEEDED:
+  - DPIIT Recognition Certificate & Incorporation Certificate
+  - Detailed Project Report (DPR) / Business Plan
+  - Executive Pitch Deck (PDF format)
+  - PAN Card of the Entity
+  - Co-founders' Profile, KYC documents, and Shareholding Pattern details
+--------------------------------------------------------------------------------
+
+SCHEME_NAME: Pragati Scholarship Scheme for Girl Students (Technical Degree)
+ELIGIBILITY_CRITERIA:
+  - The candidate must be a female student admitted to the 1st year of a Technical Degree course or 2nd year of a Technical Degree course via lateral entry in any AICTE-approved institution.
+  - Maximum of two girl children per family are eligible.
+  - Total annual family income must not be more than INR 8 Lakhs per annum.
+LAST_DATE_TO_APPLY: 2026-11-30
+DOCUMENTS_NEEDED:
+  - Class 10th and 12th Marksheets
+  - Income Certificate issued by an officer not below the rank of Tehsildar
+  - Admission Letter issued by the centralized admission authority for technical courses
+  - Tuition Fee Receipt paid to the college
+  - Affidavit stating that the family details provided are true (signed by parents)
+  - Aadhaar-enrolled Bank Account Passbook
+================================================================================

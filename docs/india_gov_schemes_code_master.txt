@@ -1,0 +1,160 @@
+================================================================================
+INDIA.GOV.IN SCHEMES CODE INTEGRATION MASTER FILE
+================================================================================
+Target: Developer Ingestion, Structural Code Seeding, & API Config Mapping
+Source: https://www.india.gov.in/
+Total Schemes Included: 10
+Format: Scheme ID | Name | Apply Website | Eligibility | Last Date | Documents
+================================================================================
+
+[SCHEME_001]
+SCHEME NAME: Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)
+APPLY OFFICIAL WEBSITE: https://pmkisan.gov.in/
+ELIGIBILITY CRITERIA:
+  - Must be a landholding farmer family with cultivable land holding in their name.
+  - Both rural and urban landholder families are eligible.
+  - Exclusions: Institutional landholders, state/central government employees (active or retired), income tax payers in the last assessment year, or professionals (doctors, engineers, lawyers) are not eligible.
+LAST DATE TO APPLY: Continuous / Rolling Registration throughout the year.
+DOCUMENTS REQUIRED:
+  - Aadhaar Card (Mandatory)
+  - Land Holding Papers / Land Registry Documents (Khata / Khasra details)
+  - Active Bank Account Passbook (Aadhaar-seeded for DBT)
+  - Active Mobile Number (Linked to Aadhaar)
+--------------------------------------------------------------------------------
+
+[SCHEME_002]
+SCHEME NAME: Pradhan Mantri Suraksha Bima Yojana (PMSBY)
+APPLY OFFICIAL WEBSITE: https://www.jansuraksha.gov.in/
+ELIGIBILITY CRITERIA:
+  - All individual bank account holders in the age group of 18 to 70 years.
+  - Must give a written consent to join/enable auto-debit of the premium amount from the linked savings account.
+LAST DATE TO APPLY: May 31st annually for the auto-renewal cycle starting June 1st (Rolling enrollment is open year-round).
+DOCUMENTS REQUIRED:
+  - Aadhaar Card
+  - Savings Bank Account Passbook
+  - Auto-debit Consent cum Application Form
+  - Nominee Identification Details
+--------------------------------------------------------------------------------
+
+[SCHEME_003]
+SCHEME NAME: Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY)
+APPLY OFFICIAL WEBSITE: https://www.jansuraksha.gov.in/
+ELIGIBILITY CRITERIA:
+  - All individual savings bank account holders in the age group of 18 to 50 years.
+  - Must give written consent to enable auto-debit of premium from the linked account.
+LAST DATE TO APPLY: May 31st annually for renewal (Enrollment remains open continuously with pro-rata premium options).
+DOCUMENTS REQUIRED:
+  - Aadhaar Card
+  - Savings Bank Account Passbook
+  - Consent-cum-Declaration-of-Good-Health Form
+  - Nominee Details
+--------------------------------------------------------------------------------
+
+[SCHEME_004]
+SCHEME NAME: Atal Pension Yojana (APY)
+APPLY OFFICIAL WEBSITE: https://www.npscra.nsdl.co.in/
+ELIGIBILITY CRITERIA:
+  - All citizens of India in the age group of 18 to 40 years.
+  - Must possess a savings bank account or post office savings account.
+  - Must not be an active taxpayer under the Income Tax Act (rule effective from Oct 1, 2022).
+LAST DATE TO APPLY: Open / Rolling enrollment continuously.
+DOCUMENTS REQUIRED:
+  - Aadhaar Card
+  - Active Savings Bank Account Details
+  - APY Application Form / Authorization Form
+  - Mobile Number
+--------------------------------------------------------------------------------
+
+[SCHEME_005]
+SCHEME NAME: Pradhan Mantri Awas Yojana - Urban (PMAY-U 2.0)
+APPLY OFFICIAL WEBSITE: https://pmay-urban.gov.in/
+ELIGIBILITY CRITERIA:
+  - Families belonging to Economically Weaker Section (EWS), Low Income Group (LIG), or Middle Income Group (MIG).
+  - The beneficiary family must not own a pucca house anywhere in India.
+  - EWS annual income up to INR 3,00,000; LIG up to INR 6,0,000; MIG up to INR 9,0,000 (regional variations apply).
+LAST DATE TO APPLY: Subject to state-level administrative guidelines / dynamic mission deadlines.
+DOCUMENTS REQUIRED:
+  - Aadhaar Cards of all family members
+  - Income Certificate issued by competent revenue authority
+  - Affidavit stating the family does not own any other pucca house in India
+  - Bank Account Passbook
+  - Voter ID / Domicile Certificate
+--------------------------------------------------------------------------------
+
+[SCHEME_006]
+SCHEME NAME: Pradhan Mantri Jan Dhan Yojana (PMJDY)
+APPLY OFFICIAL WEBSITE: https://pmjdy.gov.in/
+ELIGIBILITY CRITERIA:
+  - Any Indian citizen who does not have an active bank account (especially targeting unbanked segments).
+  - Minimum age of the applicant is 10 years (minor account features apply).
+LAST DATE TO APPLY: No deadline. Continuous, open-ended scheme.
+DOCUMENTS REQUIRED:
+  - Aadhaar Card (Primary document for e-KYC)
+  - Voter ID / Passport / Driving License / NREGA Card (in absence of Aadhaar)
+  - Two Passport-size Photographs
+--------------------------------------------------------------------------------
+
+[SCHEME_007]
+SCHEME NAME: Stand-Up India Scheme
+APPLY OFFICIAL WEBSITE: https://www.standupmitra.in/
+ELIGIBILITY CRITERIA:
+  - Must belong to Scheduled Caste (SC) or Scheduled Tribe (ST) category, OR be a Woman Entrepreneur.
+  - Applicant age must be 18 years or older.
+  - The enterprise must be a Greenfield project (first-time venture) in Manufacturing, Services, Trading, or Agri-allied sectors.
+  - In case of non-individual enterprises, at least 51% of the shareholding and controlling stake must be held by SC/ST or Woman entrepreneur.
+LAST DATE TO APPLY: Continuous / Rolling application window matching annual commercial credit distributions.
+DOCUMENTS REQUIRED:
+  - Proof of Identity (Aadhaar / Passport / Voter ID)
+  - Caste Certificate (SC/ST, if applicable)
+  - Business Address Proof / Incorporation details
+  - Detailed Project Report (DPR)
+  - Partnership Deed or MoA/AoA
+  - Last 6 months Bank Account statements
+--------------------------------------------------------------------------------
+
+[SCHEME_008]
+SCHEME NAME: Pradhan Mantri Mudra Yojana (PMMY)
+APPLY OFFICIAL WEBSITE: https://www.mudra.org.in/
+ELIGIBILITY CRITERIA:
+  - Any Indian citizen who has a business plan for a non-farm sector income-generating activity.
+  - The credit requirement must be up to INR 10 Lakh (divided into Shishu, Kishor, and Tarun categories).
+  - Should not be a defaulter to any bank or financial institution.
+LAST DATE TO APPLY: No deadline. Open throughout the year at public, private, and rural banks.
+DOCUMENTS REQUIRED:
+  - Mudra Application Form (Shishu/Kishor/Tarun specific)
+  - Identity Proof & Address Proof (Aadhaar / Voter ID / Utility bills)
+  - Business Establishment Address Proof
+  - Quotation of machinery/assets to be purchased
+  - Category certificate (SC/ST/OBC, if applicable)
+--------------------------------------------------------------------------------
+
+[SCHEME_009]
+SCHEME NAME: Pradhan Mantri Matru Vandana Yojana (PMMVY)
+APPLY OFFICIAL WEBSITE: https://pmmvy.wcd.gov.in/
+ELIGIBILITY CRITERIA:
+  - Pregnant Women and Lactating Mothers (PW&LM) for their first and second child (provided the second child is a girl).
+  - Applicant age must be 19 years or older.
+  - Exclusions: Women in regular employment with Central/State Governments, PSUs, or receiving similar maternity benefits under other laws.
+LAST DATE TO APPLY: Within 270 days from the date of childbirth or pregnancy registration cycle.
+DOCUMENTS REQUIRED:
+  - Aadhaar Card of the Beneficiary and Husband
+  - Mother and Child Protection (MCP) Card
+  - Aadhaar-seeded Bank Passbook of the mother
+  - Birth Certificate of the child (for second child benefit claim)
+--------------------------------------------------------------------------------
+
+[SCHEME_010]
+SCHEME NAME: Ayushman Bharat Pradhan Mantri Jan Arogya Yojana (AB-PMJAY)
+APPLY OFFICIAL WEBSITE: https://dashboard.pmjay.gov.in/
+ELIGIBILITY CRITERIA:
+  - Socio-economically vulnerable households as identified by SECC 2011 data.
+  - Occupational criteria in urban areas (e.g., street vendors, manual labors, ragpickers).
+  - There is no cap on family size or age of family members.
+LAST DATE TO APPLY: No deadline. Verification and Ayushman Card creation run year-round.
+DOCUMENTS REQUIRED:
+  - Aadhaar Card / Voter ID Card (Individual identification)
+  - Ration Card / PM-JAY Letter
+  - Active Mobile Number
+--------------------------------------------------------------------------------
+
+================================================================================

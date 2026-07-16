@@ -1,0 +1,115 @@
+GOVERNMENT SCHEMES MASTER DATA SHEET FOR CODE INTEGRATION
+
+Generated from Official Portals:
+- myScheme Platform (https://www.myscheme.gov.in/)
+- India Government Portal (https://www.india.gov.in/)
+- National Scholarship Portal (https://scholarships.gov.in/)
+- AICTE Student Development (https://www.aicte-india.org/)
+- Ministry of Agriculture & Farmers Welfare (https://agriwelfare.gov.in/)
+- Ministry of Women & Child Development (https://wcd.gov.in/)
+- National Health Authority (https://nha.gov.in/)
+- Ministry of Skill Development & Entrepreneurship (https://msde.gov.in/)
+================================================================================
+
+[SCHEME_001]
+SCHEME NAME: Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)
+SOURCE PORTAL: https://agriwelfare.gov.in/ / https://www.myscheme.gov.in/
+ELIGIBILITY CRITERIA:
+- Must be a landholding farmer family with cultivable land holding in their name.
+- Both rural and urban landholder families are eligible.
+- Institutional landholders, income tax payers, and high economic status individuals (e.g., constitutional post holders, retired pensioners drawing over INR 10,000/month, professionals like doctors/engineers) are strictly excluded.
+LAST DATE TO APPLY: Open-ended rolling registration; corrections and fresh cycles refresh trimonthly matching installment releases.
+DOCUMENTS REQUIRED:
+- Citizenship / Domicile Certificate
+- Aadhaar Card (Mandatory for biometric/identity seeding)
+- Landholding Papers / Land Revenue Records (Khata/Khesra numbers)
+- Bank Account Passbook (Aadhaar-enabled bank account for DBT)
+- Active Mobile Number for OTP validation
+
+--------------------------------------------------------------------------------
+
+[SCHEME_002]
+SCHEME NAME: AICTE Pragati Scholarship Scheme for Girl Students
+SOURCE PORTAL: https://www.aicte-india.org/schemes/students-development-schemes / https://scholarships.gov.in/
+ELIGIBILITY CRITERIA:
+- The candidate must be a female student.
+- Must be admitted to the 1st year of a Degree/Diploma level course or 2nd year of a Degree/Diploma course via lateral entry in any AICTE-approved institution.
+- Maximum of two girl children per family are eligible.
+- Total family income from all sources must not exceed INR 8,00,000 per annum.
+LAST DATE TO APPLY: December 31st annually (Varies slightly based on extended academic admissions calendar).
+DOCUMENTS REQUIRED:
+- Marksheet of 10th / 12th / ITI / Diploma equivalent examination
+- Annual Income Certificate issued by an officer not below the rank of Tehsildar
+- Admission letter issued by the centralized admission authority for the technical course
+- Tuition fee receipt showing payment details
+- Active Bank Passbook clearly displaying Account Holder Name, IFSC Code, and Photo (Aadhaar linked)
+- Duly signed Declaration by the Parent/Guardian confirming the family info
+
+--------------------------------------------------------------------------------
+
+[SCHEME_003]
+SCHEME NAME: Ayushman Bharat - Pradhan Mantri Jan Arogya Yojana (AB-PMJAY)
+SOURCE PORTAL: https://nha.gov.in/ / https://www.myscheme.gov.in/
+ELIGIBILITY CRITERIA:
+- Automatically determined based on SECC 2011 (Socio-Economic Caste Census) deprivation criteria for rural and urban occupational profiles.
+- Covers households with no adult male member aged 16-59, kucha houses, landless households deriving major income from manual casual labor.
+- In urban areas, specified occupational categories (e.g., ragpickers, beggars, domestic workers, street vendors, construction workers) qualify.
+LAST DATE TO APPLY: Continuous enrollment; generation of Ayushman Cards runs round-the-year at CSCs and empaneled hospitals.
+DOCUMENTS REQUIRED:
+- Aadhaar Card / Voter ID Card for individual identity mapping
+- Ration Card / PM-JAY Letter / SECC Household ID Proof
+- Active Mobile Number (for verification SMS)
+- Domicile Certificate or valid residential ID
+
+--------------------------------------------------------------------------------
+
+[SCHEME_004]
+SCHEME NAME: PM Vidyalaxmi Scheme / Central Sector Interest Subsidy (CSIS)
+SOURCE PORTAL: https://scholarships.gov.in/ / https://www.india.gov.in/
+ELIGIBILITY CRITERIA:
+- Student must have secured admission into a professional/technical higher education course in India in an approved Institution.
+- Must have taken an education loan under the Model Education Loan Scheme of IBA.
+- Total parental/family annual income must be up to INR 4,500,000 per annum.
+- Subsidy is applicable only once, either for undergraduate or postgraduate combined courses.
+LAST DATE TO APPLY: Check individual annual cycles on the portal, usually closing by November 30th or December 31st.
+DOCUMENTS REQUIRED:
+- Income Certificate from authorized state authorities
+- Educational Loan Sanction Letter from the scheduled bank
+- Bonafide Certificate from the enrolled Higher Educational Institution
+- Course Fee structure outline
+- Aadhaar Card and student PAN card
+
+--------------------------------------------------------------------------------
+
+[SCHEME_005]
+SCHEME NAME: Pradhan Mantri Matru Vandana Yojana (PMMVY)
+SOURCE PORTAL: https://wcd.gov.in/ / https://www.myscheme.gov.in/
+ELIGIBILITY CRITERIA:
+- Restricted to Pregnant Women and Lactating Mothers (PW&LM) for the first and second child (if the second child is a girl).
+- The mother's age must not be less than 19 years at the time of pregnancy registration.
+- Women in regular employment with the Central Government, State Governments, Public Sector Undertakings (PSUs), or those receiving similar structural benefits are excluded.
+LAST DATE TO APPLY: Within 270 days from the date of childbirth or as per the specific institutional pregnancy tracking records.
+DOCUMENTS REQUIRED:
+- Mother's Aadhaar Card (Mandatory)
+- Husband’s Aadhaar Card
+- MCP Card (Mother and Child Protection Card) showing registration and antenatal checkup details
+- Bank Account Passbook of the beneficiary mapped explicitly to Aadhaar
+- Birth Certificate of the infant (For late installment validation)
+
+--------------------------------------------------------------------------------
+
+[SCHEME_006]
+SCHEME NAME: Pradhan Mantri Kaushal Vikas Yojana (PMKVY - Short Term Training)
+SOURCE PORTAL: https://msde.gov.in/ / https://www.myscheme.gov.in/
+ELIGIBILITY CRITERIA:
+- Any school/college dropout or unemployed youth looking for industry-relevant skill training.
+- Age must be between 15 and 45 years.
+- Must possess a verifiable identity card (preferably Aadhaar card) and an active bank account.
+- Must meet the specific foundational educational requirements defined by the Sector Skill Council (SSC) for the chosen job role.
+LAST DATE TO APPLY: Rolling registrations based on operational batches across authorized training centers.
+DOCUMENTS REQUIRED:
+- Aadhaar Card (Mandatory for biometric tracking and attendance)
+- Educational Qualification Marksheet/Certificate (e.g., 8th, 10th, or 12th pass out records)
+- Bank Account Passbook copy
+- Recent passport-size colored photographs
+================================================================================

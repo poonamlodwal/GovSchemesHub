@@ -1,0 +1,125 @@
+================================================================================
+MYSCHEME.GOV.IN FLAGSHIP PORTAL DATABASE (STRUCTURAL TEXT FORMAT FOR CODE PARSING)
+================================================================================
+
+SCHEME_NAME: Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)
+ELIGIBILITY_CRITERIA:
+  - Must be an Indian citizen.
+  - Must be a landholding farmer family (husband, wife, and minor children) owning cultivable land in their names as per state/revenue records.
+  - Institutional landholders are strictly excluded.
+  - Families where any member is a current or former holder of constitutional posts, former/current Ministers, MPs, MLAs, MLCs, or Mayors are excluded.
+  - Current or retired government employees (Central/State/PSUs, except Multi-Tasking Staff/Class IV/Group D) are excluded.
+  - All retired pensioners whose monthly pension is INR 10,000 or more (except Group D) are excluded.
+  - Any person who paid Income Tax in the last assessment year is excluded.
+  - Professionals like Doctors, Engineers, Lawyers, Chartered Accountants, and Architects registered with professional bodies are excluded.
+LAST_DATE_TO_APPLY: Rolling Basis (Open Throughout 2026)
+DOCUMENTS_NEEDED:
+  - Aadhaar Card (Mandatory, must be linked with an active mobile number)
+  - Landholding documents (Khasra, Khatauni, or 7/12 extract showing cultivable land details)
+  - Active Savings Bank Account details with IFSC Code (Bank Passbook copy, must be Aadhaar-seeded / NPCI linked)
+  - Citizenship Proof / Domicile Certificate
+  - Passport-size photograph
+--------------------------------------------------------------------------------
+
+SCHEME_NAME: Ayushman Bharat - Pradhan Mantri Jan Arogya Yojana (AB-PMJAY)
+ELIGIBILITY_CRITERIA:
+  - Entitlement-based scheme mapped directly to families listed in the Socio-Economic Caste Census (SECC 2011) database or covered under the National Food Security Act (NFSA).
+  - Extended in 2026 to include all Senior Citizens aged 70 years and above, completely irrespective of their socio-economic or financial background.
+  - Rural Criteria: Households with only one room (kucha walls/roof), households with no adult members aged 16–59, female-headed households with no adult male member, SC/ST households, or landless manual casual laborers.
+  - Urban Criteria: Identified based on 11 occupational categories (e.g., street vendors, domestic workers, construction workers, sanitation workers, transport workers, artisans).
+  - Exclusions: Households owning 3 or 4-wheelers, mechanized farm equipment, a Kisan credit card with a limit above INR 50,000, regular government employees, or households with monthly incomes exceeding INR 10,000.
+LAST_DATE_TO_APPLY: Rolling Basis / Open Ongoing
+DOCUMENTS_NEEDED:
+  - Aadhaar Card or alternative government-approved Photo Identity Card
+  - Ration Card or Family Identification Document (to map relative names in the registry)
+  - Socio-Economic Caste Census (SECC) Letter or printout showing the beneficiary identification index number
+  - Active mobile number for biometric authentication / OTP verification
+--------------------------------------------------------------------------------
+
+SCHEME_NAME: Sukanya Samriddhi Yojana (SSY)
+ELIGIBILITY_CRITERIA:
+  - Must be opened by the natural or legal guardian on behalf of a girl child who is a resident Indian citizen.
+  - The girl child must be under the age of 10 years at the time of account opening.
+  - A maximum of two accounts are permitted per family (one account per girl child).
+  - A third account is permitted only in the verified event of the birth of twin girls as the second birth or if the first birth results in triplets.
+LAST_DATE_TO_APPLY: Ongoing / No Fixed Expiry
+DOCUMENTS_NEEDED:
+  - Birth Certificate of the Girl Child (issued by municipal authority or valid local administrative board)
+  - Aadhaar Card of the Parent or Legal Guardian (Mandatory)
+  - PAN Card of the Parent or Legal Guardian (Mandatory)
+  - Address Proof of the Guardian (Passport, Utility Bills not older than 3 months, or Bank Passbook)
+  - Passport-size photographs of the Girl Child and the Guardian
+--------------------------------------------------------------------------------
+
+SCHEME_NAME: Pradhan Mantri Street Vendor’s Atmanirbhar Nidhi (PM SVANidhi)
+ELIGIBILITY_CRITERIA:
+  - Must be an Indian street vendor or hawker engaged in urban vending (or peri-urban/rural vendors vending inside urban limits).
+  - Must have been engaged in vending activities prior to the baseline target cutoff or possess structural validation from local urban bodies.
+  - Must possess a Certificate of Vending (CoV) or Identity Card issued by Urban Local Bodies (ULBs).
+  - Vendors who left out of the ULB-led identification survey must present a Letter of Recommendation (LoR) issued by the Town Vending Committee (TVC).
+LAST_DATE_TO_APPLY: 2026-12-31
+DOCUMENTS_NEEDED:
+  - Aadhaar Card (Linked with active mobile number for digital identity setup)
+  - Certificate of Vending (CoV) or Letter of Recommendation (LoR) from the local TVC/ULB
+  - Voter Identity Card or alternative state-issued KYC document
+  - Bank Account Passbook copy showing active Account Number and IFSC code
+  - Digital Passport size photograph
+--------------------------------------------------------------------------------
+
+SCHEME_NAME: Pradhan Mantri Mudra Yojana (PMMY)
+ELIGIBILITY_CRITERIA:
+  - Must be a non-farm, non-corporate small/micro-enterprise sector citizen of India.
+  - Business entities can be proprietary firms, partnership firms, small manufacturing units, service sector units, shopkeepers, fruit/vegetable vendors, truck operators, or artisans.
+  - The credit requirements must fall within the designated tiers: Shishu (loans up to INR 50,000), Kishor (loans from INR 50,001 to INR 5 Lakhs), and Tarun (loans from INR 5,00,001 to INR 10 Lakhs).
+  - The applicant must not be a structural defaulter to any bank or financial institution.
+LAST_DATE_TO_APPLY: Rolling Basis / Open Throughout 2026
+DOCUMENTS_NEEDED:
+  - Mudra Application Form (Standard template specifying Shishu, Kishor, or Tarun tier)
+  - Proof of Identity (Aadhaar Card, Voter ID, PAN Card, Driving License)
+  - Proof of Residence (Utility bills, property tax receipt, or lease agreements)
+  - Business Proof / Registration Certificate (Udyam Registration, GST details, Shop & Establishment license)
+  - Balance Sheet, Profit & Loss Statements, and Tax Returns for past 2 years (Applicable to Kishor and Tarun tiers)
+  - Project Report detailing business projection and machinery quotation details (if buying equipment)
+--------------------------------------------------------------------------------
+
+SCHEME_NAME: Pradhan Mantri Awas Yojana - Gramin (PMAY-G)
+ELIGIBILITY_CRITERIA:
+  - Must be an Indian citizen listed under the PMAY-G permanent waitlist generated via SECC 2011 data validation or AwaasPlus household tracking.
+  - Target encompasses houseless families, families living in dilapidated houses, or houses with zero, one, or two rooms with kucha walls and kucha roofs.
+  - Exclusions: Families owning a motorized two/three/four-wheeler or agricultural equipment, families with a government employee, families paying income tax, or households with professional land phone lines/refrigerators.
+LAST_DATE_TO_APPLY: 2026-12-31
+DOCUMENTS_NEEDED:
+  - Aadhaar Card of the applicant and family members
+  - Swachh Bharat Mission (SBM) registration number
+  - Bank Account details linked with Aadhaar (Passbook copy)
+  - Job Card number registered under MGNREGA
+  - Nominee details and explicit consent declaration document
+--------------------------------------------------------------------------------
+
+SCHEME_NAME: Pradhan Mantri Matru Vandana Yojana (PMMVY)
+ELIGIBILITY_CRITERIA:
+  - Must be a Pregnant Woman and Lactating Mother (PW&LM) belonging to socially, economically disadvantaged, or marginalized groups (such as SC/ST, BPL card holders, EWS, or holders of MGNREGA Job cards).
+  - Eligible for the first live child of the family, and additionally for the second child provided the second child is a girl child.
+  - Women in regular employment with the Central Government, State Government, or Public Sector Undertakings (PSUs) are excluded as they receive separate paid maternity benefits.
+LAST_DATE_TO_APPLY: Within 270 days from the date of childbirth / LMP tracking entry.
+DOCUMENTS_NEEDED:
+  - Mother and Child Protection (MCP) Card (showing registration of pregnancy, ANC checks, and immunization tracking)
+  - Aadhaar Card of the beneficiary mother
+  - Aadhaar Card of the husband / legal partner
+  - Post-birth Child Birth Registration Certificate (issued by local government authority)
+  - Active Bank Passbook copy linked with Aadhaar (DBT mandatory)
+--------------------------------------------------------------------------------
+
+SCHEME_NAME: Atal Pension Yojana (APY)
+ELIGIBILITY_CRITERIA:
+  - Must be a resident Indian citizen.
+  - The age of entry must be between 18 years and 40 years.
+  - Must possess a savings bank account with an automated savings auto-debit facility.
+  - Individuals who are income tax payers or are covered under formal statutory social security frameworks (like EPFO or NPS corporate setups) are excluded from joining APY.
+LAST_DATE_TO_APPLY: Ongoing / Open Throughout 2026
+DOCUMENTS_NEEDED:
+  - APY Subscriber Registration Form
+  - Aadhaar Card (Primary Identity and Address proof)
+  - Bank Account Passbook copy with clear visibility of Account Number and IFSC details
+  - Active Mobile Number (for real-time SMS alerts regarding automated premium cuts)
+================================================================================

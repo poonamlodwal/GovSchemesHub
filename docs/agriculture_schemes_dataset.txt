@@ -1,0 +1,73 @@
+======================================================================
+SCHEME DATA COMPILATION - MINISTRY OF AGRICULTURE & FARMERS WELFARE
+======================================================================
+
+[SCHEME 1]
+Scheme Name: Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)
+Eligibility Criteria: All landholding farmer families across the country with cultivable landholding in their names. Excludes institutional landholders and high-income/tax-paying families.
+Last Date to Apply: Ongoing / Continuous Enrollment
+Required Documents: Aadhaar Card, Land ownership papers (Khatauni/Patta), Bank Account Details, Mobile Number linked with Aadhaar.
+Official Apply Website: https://pmkisan.gov.in/
+
+[SCHEME 2]
+Scheme Name: Pradhan Mantri Fasal Bima Yojana (PMFBY)
+Eligibility Criteria: All farmers including sharecroppers and tenant farmers growing notified crops in notified areas are eligible. 
+Last Date to Apply: Kharif season: Usually July 31st annually | Rabi season: Usually December 31st annually.
+Required Documents: Land records (RoR), Sowing Certificate, Bank Passbook, Aadhaar Card, ID proof (Voter Card/PAN).
+Official Apply Website: https://pmfby.gov.in/
+
+[SCHEME 3]
+Scheme Name: Agriculture Infrastructure Fund (AIF)
+Eligibility Criteria: Primary Agricultural Credit Societies (PACS), Marketing Cooperative Societies, Farmer Producers Organizations (FPOs), Agri-entrepreneurs, Startups, and Central/State agencies.
+Last Date to Apply: Open till FY 2032-33 (Infrastructure project basis)
+Required Documents: Detailed Project Report (DPR), Entity registration certificate, KYC of promoters, Land documents/lease agreement, Balance sheets (if applicable).
+Official Apply Website: https://agriinfra.dac.gov.in/
+
+[SCHEME 4]
+Scheme Name: Pradhan Mantri Krishi Sinchayee Yojana (PMKSY - Per Drop More Crop)
+Eligibility Criteria: All categories of farmers who own land or have a valid lease agreement for micro-irrigation systems (drip/sprinkler installation). Special focus on small and marginal farmers.
+Last Date to Apply: Varies by state implementing portals (Continuous window open)
+Required Documents: Aadhaar Card, Passport size photograph, Land registration certificate, Bank passbook copy, Soil health card.
+Official Apply Website: https://pmksy.gov.in/
+
+[SCHEME 5]
+Scheme Name: Sub-Mission on Agricultural Mechanization (SMAM)
+Eligibility Criteria: Small, marginal, SC/ST, and women farmers are prioritized for subsidies on farm machinery (tractors, power tillers, rotavators, etc.).
+Last Date to Apply: State-specific deadlines (Usually active prior to cultivation seasons)
+Required Documents: Aadhaar card, Caste certificate (where applicable), Land possession proof, Bank details, Quote/Invoice of the machinery.
+Official Apply Website: https://agrimachinery.nic.in/
+
+[SCHEME 6]
+Scheme Name: Paramparagat Krishi Vikas Yojana (PKVY)
+Eligibility Criteria: Farmers must form clusters of 50 or more farmers having a total of 50 acres of land to transition to organic farming practices.
+Last Date to Apply: Group registration is open via state agriculture offices/NGO clusters.
+Required Documents: Group/Cluster resolution document, Aadhaar cards of all members, Individual land maps, Bank account details for the cluster head.
+Official Apply Website: https://pgsindia-ncof.gov.in/
+
+[SCHEME 7]
+Scheme Name: National Bamboo Mission (NBM)
+Eligibility Criteria: Farmers, entrepreneurs, FPOs, and private companies looking to cultivate bamboo or set up primary processing units.
+Last Date to Apply: Project proposal basis (Ongoing through state missions)
+Required Documents: Detailed Project Report (DPR), Pan card, Aadhaar card, Land ownership certificate/Lease documents for at least 10 years, Bank details.
+Official Apply Website: https://nbm.nic.in/
+
+[SCHEME 8]
+Scheme Name: PM-Kisan Maandhan Yojana (PM-KMY)
+Eligibility Criteria: Small and marginal farmers aged between 18 and 40 years. Must possess cultivable land up to 2 hectares according to land records of the state/UT.
+Last Date to Apply: Continuous Registration (Until the individual reaches 40 years of age)
+Required Documents: Aadhaar Card, Savings Bank Account Details, Mobile number.
+Official Apply Website: https://maandhan.in/
+
+[SCHEME 9]
+Scheme Name: Soil Health Card Scheme
+Eligibility Criteria: All farmers across India who hold cultivable land and require customized fertilizer dosing recommendations.
+Last Date to Apply: Free nationwide scheme / Cycle-wise regular soil tests conducted by localized units.
+Required Documents: Aadhaar number, Land Survey number (Khasra), Phone number.
+Official Apply Website: https://soilhealth.dac.gov.in/
+
+[SCHEME 10]
+Scheme Name: Mission for Integrated Development of Horticulture (MIDH)
+Eligibility Criteria: Individual farmers, FPOs, self-help groups (SHGs), and cooperatives engaged in high-value horticulture crops (fruits, vegetables, spices, mushrooms).
+Last Date to Apply: Open throughout the year via respective state horticulture directorates.
+Required Documents: Aadhaar card, Land record documents, Project proposal outline, Bank passbook, Passport size photo.
+Official Apply Website: https://midh.gov.in/

@@ -1,0 +1,109 @@
+================================================================================
+MYSCHEME.GOV.IN MASTER DATA INITIATIVES FILE
+================================================================================
+Generated for: Code Integration, Database Seeding, and Document Validation
+Source: https://www.myscheme.gov.in/
+Format Structure: Scheme Name | Eligibility Criteria | Last Date to Apply | Required Documents
+================================================================================
+
+[SCHEME_001]
+SCHEME NAME: Pradhan Mantri Suraksha Bima Yojana (PMSBY)
+ELIGIBILITY CRITERIA:
+- Age limit between 18 and 70 years.
+- Must hold an active individual bank account linked with Aadhaar.
+- Must provide explicit consent to enable the auto-debit facility for annual premium payment.
+LAST DATE TO APPLY: June 1st of every calendar year (Auto-renewal cycle begins annually on June 1st; applications roll continuously).
+DOCUMENTS REQUIRED:
+- Aadhaar Card (Primary Identity Proof)
+- Bank Account Passbook / Statement
+- Completed Application Cum Auto-Debit Consent Form
+- Active Mobile Number (Linked to Bank Account)
+- Nominee Details & Identification Documents
+--------------------------------------------------------------------------------
+
+[SCHEME_002]
+SCHEME NAME: Stand-Up India Scheme
+ELIGIBILITY CRITERIA:
+- Must belong to the Scheduled Caste (SC), Scheduled Tribe (ST), or be a Woman Entrepreneur.
+- Age must be 18 years or older.
+- The financial assistance is available only for setting up Greenfield (First-time) projects/enterprises.
+- The enterprise can be in the Manufacturing, Services, Trading, or Agri-allied sectors.
+- In case of non-individual enterprises, at least 51% of the shareholding and controlling stake must be held by an SC/ST or Woman entrepreneur.
+- The applicant must not be a defaulter to any bank or financial institution.
+LAST DATE TO APPLY: December 31st of the current fiscal year (Open-ended rolling admissions subject to annual financial allocations).
+DOCUMENTS REQUIRED:
+- Proof of Identity (Aadhaar Card / Voter ID / Passport / Driving License)
+- Proof of Category (SC/ST Certificate issued by competent authority, if applicable)
+- Business Enterprise Address Proof & Incorporation Documents
+- Detailed Project Report (DPR) highlighting manufacturing/service details
+- Partnership Deed / Memorandum and Articles of Association (for non-individual entities)
+- Bank Account Statements for the last 6 months
+- Passport size photographs of the promoters (2 copies)
+--------------------------------------------------------------------------------
+
+[SCHEME_003]
+SCHEME NAME: Pradhan Mantri Uchchatar Shiksha Protsahan (PM-USP) - Central Sector Scheme of Scholarship
+ELIGIBILITY CRITERIA:
+- The applicant must be pursuing regular courses at colleges/ institutions recognized by AICTE or respective Regulatory Bodies.
+- Gross parental/ family income of the applicant should not exceed INR 4,50,000/- per annum.
+- Students pursuing correspondence, distance mode, or pursuing Diploma courses are not eligible.
+- Students who are already availing the benefit from any other scholarship schemes are excluded.
+LAST DATE TO APPLY: December 31st annually (Varies slightly matching extended academic timelines).
+DOCUMENTS REQUIRED:
+- Marksheet of 10th / 12th standard examination
+- Income Certificate issued by an authorized state revenue authority
+- Aadhaar Card (Mandatory for Aadhaar e-KYC)
+- Active Bank Passbook front page copy showing Account Number and IFSC code clearly
+- Bonafide Certificate from the educational institution (if studying out of the domicile state)
+--------------------------------------------------------------------------------
+
+[SCHEME_004]
+SCHEME NAME: Special Incentive to OBC Meritorious Students
+ELIGIBILITY CRITERIA:
+- Open to OBC (Other Backward Class) students who have scored 80% or above in their HSSLC examination.
+- The annual income of the applicant's parents must not exceed INR 5,00,000/-.
+- The scheme recognizes HSSLC results from verified education boards (SEBA, CBSE, ICSE).
+- A valid OBC certificate (mentioning sub-caste) issued by the competent authority is mandatory.
+LAST DATE TO APPLY: August 31st of the active academic cycle.
+DOCUMENTS REQUIRED:
+- Caste Certificate (valid OBC certificate, inserting sub-caste)
+- Parents' Income Certificate, issued by the Circle Officer
+- HSSLC Admit Card and Marksheet
+- HSLC Marksheet
+- Front Page of Bank Passbook
+- Aadhaar Card / PAN Card
+--------------------------------------------------------------------------------
+
+[SCHEME_005]
+SCHEME NAME: Old Age Samman Allowance (Haryana)
+ELIGIBILITY CRITERIA:
+- The applicant must be a senior citizen aged 60 years or older.
+- Must be a permanent resident/domicile of the state of Haryana.
+- The combined annual income of the applicant and their spouse from all sources must not exceed INR 3,00,000 per annum.
+- The applicant must not be receiving any other government pension or public sector allowance.
+LAST DATE TO APPLY: Rolling Application / Open continuously throughout the calendar year.
+DOCUMENTS REQUIRED:
+- Family ID (Parivar Pehchan Patra - PPP)
+- Aadhaar Card
+- Birth Certificate / School Leaving Certificate (Age Proof verification)
+- Domicile Certificate of Haryana
+- Income Certificate verified by local revenue authorities
+- Joint Bank Account details with Aadhaar mapping
+--------------------------------------------------------------------------------
+
+[SCHEME_006]
+SCHEME NAME: Udyogini Scheme (Karnataka)
+ELIGIBILITY CRITERIA:
+- Only women entrepreneurs are eligible to apply for this micro-enterprise scheme.
+- Age of the applicant must fall within the range of 18 to 55 years.
+- The family's total annual income must be below INR 1,50,000 for general categories (Income limit waived for SC/ST, disabled, or widowed applicants).
+- The financial credit must be utilized for launching tiny/small retail, service, or micro-manufacturing businesses.
+LAST DATE TO APPLY: November 30th of the current financial allocation window.
+DOCUMENTS REQUIRED:
+- Aadhaar Card / Voter Identification Card
+- Caste or Category Certificate (for SC/ST or Special Category verification)
+- Income Certificate issued by the Tahsildar
+- BPL Card / Ration Card
+- Detailed Project Estimate or Business Proposal Quote
+- Two passport size color photographs
+================================================================================

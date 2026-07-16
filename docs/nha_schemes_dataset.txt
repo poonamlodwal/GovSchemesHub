@@ -1,0 +1,73 @@
+======================================================================
+SCHEME DATA COMPILATION - NATIONAL HEALTH AUTHORITY (NHA)
+======================================================================
+
+[SCHEME 1]
+Scheme Name: Ayushman Bharat Pradhan Mantri Jan Arogya Yojana (AB-PMJAY)
+Eligibility Criteria: Households identified via SECC 2011 data (rural families living in one-room kucha houses, landless manual laborers, SC/ST, and urban workers like domestic helps, rickshaw pullers). All senior citizens aged 70+ regardless of socio-economic status.
+Last Date to Apply: Ongoing / Continuous Enrollment
+Required Documents: Aadhaar Card, Ration Card / PM-JAY Letter, Income Certificate, Caste Certificate (where applicable).
+Official Apply Website: https://pmjay.gov.in/
+
+[SCHEME 2]
+Scheme Name: Ayushman Bharat Digital Mission (ABDM) - ABHA Generation
+Eligibility Criteria: All Indian citizens seeking to digitize, securely store, and share their medical histories, lab reports, and doctor prescriptions.
+Last Date to Apply: Ongoing / Continuous Generation
+Required Documents: Aadhaar Card or Driving License, Mobile Number linked with identity proof.
+Official Apply Website: https://abdm.gov.in/
+
+[SCHEME 3]
+Scheme Name: Digital Health Incentive Scheme (DHIS) for Health Facilities
+Eligibility Criteria: Hospitals, diagnostic labs, clinics, and Digital Solution Companies (DSCs) registered under the Health Facility Registry (HFR) linking health records using ABDM V3 APIs.
+Last Date to Apply: Extended/Active dynamically (currently active through FY 2026-27 cyclical phases).
+Required Documents: Health Facility Registry (HFR) Unique ID, Active ABDM-compliant software ID, Bank Account/PAN of the facility, Transaction log reports.
+Official Apply Website: https://abdm.gov.in/dhis
+
+[SCHEME 4]
+Scheme Name: Healthcare Professionals Registry (HPR) Component
+Eligibility Criteria: Verified doctors, nurses, dentists, and paramedical staff practicing modern or traditional (AYUSH) medicine across public and private systems.
+Last Date to Apply: Ongoing Enrollment
+Required Documents: State/National Medical Council Registration Certificate, Identity Proof (Aadhaar/PAN), Degree/Diploma Certificate, Passport size photo.
+Official Apply Website: https://hpr.abdm.gov.in/
+
+[SCHEME 5]
+Scheme Name: Health Facility Registry (HFR) Component
+Eligibility Criteria: All state/central government hospitals, private clinics, multi-specialty centers, diagnostics, and standalone pharmacies.
+Last Date to Apply: Continuous Registration
+Required Documents: Commercial/Clinical Establishment License, Incorporation certificate, Pan card of the firm, Authority letter for the facility manager.
+Official Apply Website: https://hfr.abdm.gov.in/
+
+[SCHEME 6]
+Scheme Name: PM-JAY Hospital Empanelment Module (HEM)
+Eligibility Criteria: Public or private hospitals possessing a minimum number of beds, proper operating theater/ICU capabilities, and adherence to quality standards laid down by NHA.
+Last Date to Apply: Open throughout the year
+Required Documents: Clinical Establishment Act Certificate, Pollution Control Board NOC, Fire Safety Certificate, List of medical equipment & doctors, Bio-medical waste disposal agreement.
+Official Apply Website: https://hem.nha.gov.in/
+
+[SCHEME 7]
+Scheme Name: Unified Health Interface (UHI) Network Registration
+Eligibility Criteria: Tech aggregators, telemedicine software companies, and patient applications setting up systems to allow universal doctor consulting and booking interfaces.
+Last Date to Apply: Ongoing Integration Window
+Required Documents: Company Registration, Technical Sandbox integration clearance report, Developer API access token details, KYC of authorized signatories.
+Official Apply Website: https://abdm.gov.in/
+
+[SCHEME 8]
+Scheme Name: Ayushman Bharat Central Armed Police Forces (AB-CAPF) Healthcare Scheme
+Eligibility Criteria: Serving personnel of all Central Armed Police Forces (CRPF, BSF, CISF, ITBP, SSB, NSG, and Assam Rifles) along with their dependent family members.
+Last Date to Apply: Rolling updates via departmental human resources tracking.
+Required Documents: CAPF Serving ID Card, Dependent Certificate, Family Aadhaar Cards, Joint Passport Photograph.
+Official Apply Website: https://tms.pmjay.gov.in/
+
+[SCHEME 9]
+Scheme Name: AB-PMJAY Senior Citizen Extension Scheme
+Eligibility Criteria: All senior citizens of India aged 70 years and above, irrespective of their financial brackets, ensuring a distinct/separate 5 Lakh health coverage top-up.
+Last Date to Apply: Continuous / Ongoing enrollment
+Required Documents: Age verification certificate, Aadhaar card (mandatory with correct birth year details), Mobile number.
+Official Apply Website: https://beneficiary.nha.gov.in/
+
+[SCHEME 10]
+Scheme Name: ABDM Sandbox Integration & Certification Scheme
+Eligibility Criteria: Healthcare software vendors, software engineers, and health-tech startups aiming to make their software products ABDM-compliant.
+Last Date to Apply: Ongoing open developer sandbox pipeline.
+Required Documents: System Architecture layout, Functional Self-Assessment report, Software description profile, Entity KYC.
+Official Apply Website: https://sandbox.abdm.gov.in/

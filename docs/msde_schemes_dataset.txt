@@ -1,0 +1,73 @@
+======================================================================
+SCHEME DATA COMPILATION - MINISTRY OF SKILL DEVELOPMENT & ENTREPRENEURSHIP
+======================================================================
+
+[SCHEME 1]
+Scheme Name: Pradhan Mantri Kaushal Vikas Yojana (PMKVY 4.0)
+Eligibility Criteria: Any Indian national aged 15-45 years who is unemployed, a school/college dropout, or looking to upscale skills. Must possess a valid Aadhaar card and a linked bank account.
+Last Date to Apply: Ongoing / Continuous batch enrollment.
+Required Documents: Aadhaar Card, Bank Passbook, Educational Certificates (if applicable), Passport size photograph.
+Official Apply Website: https://www.skillindia.gov.in/
+
+[SCHEME 2]
+Scheme Name: National Apprenticeship Promotion Scheme (NAPS)
+Eligibility Criteria: Candidates must be at least 14 years of age (18 for hazardous occupations) and possess minimum educational qualification required for the trade (5th class to Degree/Diploma holders).
+Last Date to Apply: Open throughout the year.
+Required Documents: Aadhaar Card, Educational Qualification Marksheet, Bank Account Details, Caste Certificate (if applicable).
+Official Apply Website: https://www.apprenticeshipindia.gov.in/
+
+[SCHEME 3]
+Scheme Name: Jan Shikshan Sansthan (JSS) Scheme
+Eligibility Criteria: Non-literates, neo-literates, school dropouts, and individuals in rural/urban-slum areas. Priority given to women, SC, ST, OBC, and minorities aged between 15-45 years.
+Last Date to Apply: Rolling admission based on batch schedules at local JSS centers.
+Required Documents: Aadhaar Card, Age Proof, Category Certificate (for fee concessions), Passport size photograph.
+Official Apply Website: https://jss.gov.in/
+
+[SCHEME 4]
+Scheme Name: Craftsmen Training Scheme (CTS) via ITIs
+Eligibility Criteria: Individuals who have passed 8th, 10th, or 12th standard (depending on the specific trade curriculum). Minimum age is 14 years with no upper age limit.
+Last Date to Apply: Typically July to August annually (varies by State Directorate of Technical Education).
+Required Documents: 8th/10th/12th School Leaving Certificate & Marksheet, Aadhaar Card, Caste Certificate (if applicable), Domicile Certificate.
+Official Apply Website: https://www.skillingitaly.gov.in/
+
+[SCHEME 5]
+Scheme Name: Skill Acquisition and Knowledge Awareness for Livelihood Promotion (SANKALP)
+Eligibility Criteria: Institutional mechanism focusing on trainers, assessors, and marginalized groups (women, SC/ST, Persons with Disabilities) for decentralized district-level skill planning.
+Last Date to Apply: Active via rolling institutional/district proposals.
+Required Documents: Institutional Registration, Project Proposal (DPR), Trainee/Trainer Aadhaar details, Disability Certificate (if applying under PwD quota).
+Official Apply Website: https://msde.gov.in/
+
+[SCHEME 6]
+Scheme Name: Crafts Instructor Training Scheme (CITS)
+Eligibility Criteria: Candidates must possess an ITI National Trade Certificate (NTC), National Apprenticeship Certificate (NAC), or a Diploma/Degree in a relevant engineering/vocational stream.
+Last Date to Apply: Usually May to June annually (via All India Common Entrance Test - AICET).
+Required Documents: ITI Certificate / Diploma / Degree Certificate, Aadhaar Card, Entrance Exam Scorecard, Category Certificate.
+Official Apply Website: https://www.nimionlineadmission.in/
+
+[SCHEME 7]
+Scheme Name: National Entrepreneurship Awards (NEA)
+Eligibility Criteria: First-generation young entrepreneurs up to the age of 40 years, and organizations/institutions providing entrepreneurship development ecosystems.
+Last Date to Apply: Announced annually per award cycle notifications.
+Required Documents: Business Registration Certificate (Udyam/MSME), Audited Financial Statements, Founders' Aadhaar/PAN Card, Achievement Summary Report.
+Official Apply Website: https://msde.gov.in/
+
+[SCHEME 8]
+Scheme Name: Pradhan Mantri YUVA Yojana (Yuva Udyamita Vikas Abhiyan)
+Eligibility Criteria: Potential and existing young entrepreneurs up to 30 years old enrolled in higher education institutions, ITIs, or Entrepreneurship Development Centers (EDCs).
+Last Date to Apply: Continuous cycle managed via associated academic/training nodes.
+Required Documents: Aadhaar Card, Student ID / Enrolment proof, Business Plan Idea brief, Bank Passbook copy.
+Official Apply Website: https://msde.gov.in/
+
+[SCHEME 9]
+Scheme Name: Special Projects under PMKVY
+Eligibility Criteria: Targeted at marginalized or geographically isolated populations (e.g., jail inmates, tribal groups, North-East regions) that do not fit standard PMKVY parameters.
+Last Date to Apply: Project proposal windows opened intermittently by NSDC.
+Required Documents: Project Proposal, Sponsoring agency clearance, Candidate identity proof (Aadhaar/Voter Card), Group certification.
+Official Apply Website: https://www.nsdcindia.org/
+
+[SCHEME 10]
+Scheme Name: Pradhan Mantri Kaushal Kendras (PMKK) Infrastructure Funding
+Eligibility Criteria: Organizations, skill training providers, or corporate entities capable of setting up state-of-the-art model training centers in designated districts.
+Last Date to Apply: Allocated based on district allocation vacancy notices.
+Required Documents: Corporate registration proof, Financial net-worth details, Land/building ownership or long lease agreement, Detailed center plan layout.
+Official Apply Website: https://nsdcindia.org/
