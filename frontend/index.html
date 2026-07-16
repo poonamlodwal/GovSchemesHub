@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SchemeHub — Discover Government Schemes & Services You're Eligible For</title>
+    <meta name="description" content="SchemeHub is an AI-powered platform that helps Indian citizens discover government schemes, scholarships, subsidies, grants, and public services based on their eligibility." />
+    <meta property="og:title" content="SchemeHub — Discover Government Schemes & Services" />
+    <meta property="og:description" content="AI-powered platform helping Indian citizens find government schemes they're eligible for." />
+    <meta property="og:image" content="https://bolt.new/static/og_default.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://bolt.new/static/og_default.png" />
+    <script>
+      (function () {
+        var theme = localStorage.getItem('theme');
+        if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
