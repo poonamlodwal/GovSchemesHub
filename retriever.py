@@ -1,8 +1,16 @@
 import os
 from langchain_chroma import Chroma
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
+from dotenv import load_dotenv
 
-Gov_API_KEY =os.getenv("Gov_API_KEY")
+load_dotenv()
+try:
+    from pydantic.types import SecretStr
+except Exception:
+    from pydantic import SecretStr
+
+_raw_key = os.getenv("Gov_API_KEY")
+Gov_API_KEY = SecretStr(_raw_key) if _raw_key is not None else None
 CHROMA_DB_PATH = "./chroma_db"
 COLLECTION_NAME = "documents"
 
@@ -10,7 +18,7 @@ def get_retriever():
     """Load the existing vector store and return it as a retriever."""
     embeddings = GoogleGenerativeAIEmbeddings(
         model="gemini-embedding-001",
-        google_api_key=Gov_API_KEY
+        api_key= Gov_API_KEY
     )
     
     vectorstore = Chroma(

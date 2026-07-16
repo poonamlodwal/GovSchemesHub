@@ -1,10 +1,16 @@
 import os
+try:
+    from pydantic.types import SecretStr
+except Exception:
+    from pydantic import SecretStr
+
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnablePassthrough
 from langchain_core.output_parsers import StrOutputParser
 
-Gov_API_KEY =os.getenv("Gov_API_KEY")
+_raw_key = os.getenv("Gov_API_KEY")
+Gov_API_KEY = SecretStr(_raw_key) if _raw_key is not None else None
 
 def format_docs(docs):
     """Combine the content of retrieved documents into a single text block."""
@@ -15,8 +21,8 @@ def get_rag_chain(retriever):
     
     
     llm = ChatGoogleGenerativeAI(
-        model="gemini-2.5-flash",
-        google_api_key=Gov_API_KEY,
+        model="gemini-flash-latest",
+        api_key=Gov_API_KEY,
         temperature=0.2
     )
 
