@@ -1,5 +1,5 @@
 import chromadb
-from llm_api_provider import embed_text
+from Backend.llm_api_provider import embed_text
 
 _chroma_client = chromadb.PersistentClient(path="./chroma_db")
 _collection = _chroma_client.get_or_create_collection(name="gov_schemes")

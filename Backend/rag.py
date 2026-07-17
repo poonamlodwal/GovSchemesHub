@@ -1,5 +1,5 @@
-from vector_store import search
-from llm_api_provider import ask_ai
+from Backend.vector_store import search
+from Backend.llm_api_provider import ask_ai
 
 def ask_with_rag(question: str, n_results: int = 5, filter_document_type: str = None):
     chunks = search(question, n_results=n_results, filter_document_type=filter_document_type)

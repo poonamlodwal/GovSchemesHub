@@ -1,7 +1,7 @@
 import os
-from exctractors import extract_file
-from chunker import chunk_document
-from vector_store import add_chunks
+from Backend.exctractors import extract_file
+from Backend.chunker import chunk_document
+from Backend.vector_store import add_chunks
 
 def run_ingestion(folder="docs"):
     if not os.path.exists(folder):

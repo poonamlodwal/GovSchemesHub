@@ -1,6 +1,6 @@
 import sys
-from ingest import run_ingestion
-from rag import ask_with_rag
+from Backend.ingest import run_ingestion
+from Backend.rag import ask_with_rag
 
 def main():
     print("--- GovSchemesHub RAG System ---")
