@@ -88,12 +88,31 @@ export function Navbar() {
                 </Button>
               </Link>
 
-              <Link to="/dashboard" className="hidden sm:block">
-                <Button size="sm" variant="ghost" className="gap-1.5">
-                  <User className="w-4 h-4" />
-                  Sign In
-                </Button>
-              </Link>
+              <div className="relative hidden sm:block group">
+  <Button
+    size="sm"
+    variant="ghost"
+    className="gap-1.5 cursor-not-allowed"
+  >
+    <User className="w-4 h-4" />
+    Sign In
+  </Button>
+
+  <div
+    className="absolute top-full left-1/2 -translate-x-1/2 mt-2
+               opacity-0 invisible
+               group-hover:opacity-100 group-hover:visible
+               transition-all duration-300
+               bg-slate-900 dark:bg-slate-800
+               text-white text-xs
+               px-3 py-2 rounded-lg
+               shadow-xl
+               whitespace-nowrap
+               z-50"
+  >
+    Coming Soon!⏳
+  </div>
+</div>
 
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}

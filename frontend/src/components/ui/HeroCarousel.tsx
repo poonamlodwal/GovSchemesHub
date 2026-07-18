@@ -1,7 +1,12 @@
 import { useState, useEffect, useCallback } from 'react';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
+import govscemes from "../../IMAGES/carousel.image/govscemes.jpg";
+import healthcare from "../../IMAGES/carousel.image/healthcare.webp";
+import farmer from "../../IMAGES/carousel.image/farmer.webp";
+import education from "../../IMAGES/carousel.image/education.webp";
+import entueneuurprinship from "../../IMAGES/carousel.image/entueneuurprinship.jpg";
+import oldpeople from "../../IMAGES/carousel.image/oldpeople.webp";
 interface CarouselSlide {
   image: string;
   title: string;
@@ -12,39 +17,46 @@ interface CarouselSlide {
 
 const slides: CarouselSlide[] = [
   {
-    image: 'https://images.pexels.com/photos/8108055/pexels-photo-8108055.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: govscemes,
     title: 'Empowering Every Citizen',
     subtitle: 'Discover schemes tailored to your needs — from education to entrepreneurship, all in one place.',
-    badge: '1200+ Schemes',
+    badge: '',
     link: '/schemes',
   },
   {
-    image: 'https://images.pexels.com/photos/8438918/pexels-photo-8438918.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: healthcare,
     title: 'Healthcare for All',
     subtitle: 'Find health insurance and medical assistance schemes you qualify for — up to ₹5 lakh coverage.',
     badge: 'Healthcare',
     link: '/schemes?category=healthcare',
   },
   {
-    image: 'https://images.pexels.com/photos/8438922/pexels-photo-8438922.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: farmer,
     title: 'Supporting Our Farmers',
     subtitle: 'Income support, crop insurance, and agricultural subsidies — matched to your land and crops.',
     badge: 'Agriculture',
     link: '/schemes?category=farmers',
   },
   {
-    image: 'https://images.pexels.com/photos/8438951/pexels-photo-8438951.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: education,
     title: 'Education for Every Student',
     subtitle: 'Scholarships and fellowships matched to your background, category, and qualifications.',
     badge: 'Education',
     link: '/schemes?category=students',
   },
   {
-    image: 'https://images.pexels.com/photos/8438998/pexels-photo-8438998.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: entueneuurprinship,
     title: 'Building Entrepreneurs',
     subtitle: 'Collateral-free business loans, startup support, and mentorship — up to ₹10 lakh.',
     badge: 'Entrepreneurship',
     link: '/schemes?category=entrepreneurs',
+  },
+  {
+    image: oldpeople,
+    title: 'Providing support to our senior citizens',
+    subtitle: 'Pension schemes, healthcare benefits, travel concessions, and financial assistance designed to support senior citizens.',
+    badge: 'Senior citizens',
+    link: '/schemes?category=',
   },
 ];
 
