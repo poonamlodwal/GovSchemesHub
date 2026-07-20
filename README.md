@@ -1,6 +1,6 @@
-# GovSchemeHub
+# SchemeHub
 
-GovSchemeHub is a web-based platform that helps users explore and understand various government schemes in one place. It simplifies access to scheme-related information for users.
+SchemeHub is a web-based platform that helps users explore and understand various government schemes in one place. It simplifies access to scheme-related information for users.
 
 ## 🔗 Live Demo
 
