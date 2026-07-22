@@ -3,7 +3,7 @@ import os
 from dotenv import load_dotenv, find_dotenv
 
 # Central config — change provider/model here only
-MODEL_NAME = "gemini-2.0-flash"
+MODEL_NAME = "gemini-3.5-flash"
 
 # Search upward for .env
 load_dotenv(find_dotenv())
