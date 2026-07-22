@@ -86,10 +86,10 @@ ANSWER (cite sources like [Source 1], [Source 2]):"""
 try:
     from llm_api_provider import ask_ai_stream
     for token in ask_ai_stream(prompt):
-            if token:
-            yield {"text": token}
+        if token:
+         yield {"text": token}
 except Exception as e:
-            yield {"error": f"Error calling AI Assistant: {str(e)}"}
+         yield {"error": f"Error calling AI Assistant: {str(e)}"}
 
 
 if __name__ == "__main__":
