@@ -8,8 +8,6 @@ from werkzeug.utils import secure_filename
 from flask import Flask
 from flask_cors import CORS
 
-app = Flask(__name__)
-CORS(app, origins=["https://govschemeshub-2.onrender.com"])# ✅ THIS LINE FIXES YOUR ERROR
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
@@ -66,13 +64,14 @@ def test():
 def query_rag():
     data = request.get_json(silent=True) or {}
     question = data.get("question")
+    history = data.get("history", [])
     
     if not question or not question.strip():
         return jsonify({"error": "Missing or empty 'question' in request body"}), 400
         
     def sse_generator():
         try:
-            for event_data in ask_with_rag_stream(question):
+            for event_data in ask_with_rag_stream(question, history=history):
                 if "error" in event_data:
                     yield f"event: error\ndata: {json.dumps({'error': event_data['error']})}\n\n"
                     break

@@ -35,7 +35,8 @@ ANSWER (cite sources like [Source 1], [Source 2]):"""
         return f"Error calling AI Assistant: {str(e)}"
 
 
-def ask_with_rag_stream(question: str, n_results: int = 5, filter_document_type: str = None):
+def ask_with_rag_stream(question: str, n_results: int = 5, filter_document_type: str = None, history: list = None):
+
     try:
         chunks = search(question, n_results=n_results, filter_document_type=filter_document_type)
     except Exception as e:
@@ -57,30 +58,38 @@ def ask_with_rag_stream(question: str, n_results: int = 5, filter_document_type:
             f"[Source {i+1}: {doc_type} — {filename}]\n{c.get('text', '')}"
         )
 
-    yield {"sources": sources}
-
     if not chunks:
+        yield {"sources":[]}
         yield {"text": "No relevant information found in the documents."}
         return
+    
+    yield {"sources": sources}
+context = "\n\n".join(context_blocks)
 
-    context = "\n\n".join(context_blocks)
+history_text = ""
+if history:
+    for msg in history:
+        role = "User" if msg.get("role") == "user" else "Assistant"
+        history_text += f"\n{role}: {msg.get('content', '')}"
 
-    prompt = f"""You are an AI assistant for Indian Government Schemes. Answer the question using ONLY the context below. If the answer isn't in the context, say so clearly. Cite which source(s) you used by number.
+prompt = f"""You are an AI assistant for Indian Government Schemes. Answer the question using ONLY the context below. If the answer isn't in the context, say so clearly. Cite which source(s) you used by number.
+CONVERSATION HISTORY (for context):
+{history_text if history_text else "No previous conversation."}
 
 CONTEXT:
 {context}
 
-QUESTION: {question}
+CURRENT QUESTION: {question}
 
 ANSWER (cite sources like [Source 1], [Source 2]):"""
 
-    try:
-        from llm_api_provider import ask_ai_stream
-        for token in ask_ai_stream(prompt):
+try:
+    from llm_api_provider import ask_ai_stream
+    for token in ask_ai_stream(prompt):
             if token:
-                yield {"text": token}
-    except Exception as e:
-        yield {"error": f"Error calling AI Assistant: {str(e)}"}
+            yield {"text": token}
+except Exception as e:
+            yield {"error": f"Error calling AI Assistant: {str(e)}"}
 
 
 if __name__ == "__main__":

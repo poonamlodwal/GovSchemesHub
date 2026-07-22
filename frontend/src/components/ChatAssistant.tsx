@@ -107,8 +107,17 @@ export function ChatAssistant() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ question: text }),
-      });
+        body: JSON.stringify({
+           question: text,
+           history: messages
+            .filter(m => m.sender !== 'system' && m.text)
+            .slice(-6)
+            .map(m => ({
+              role: m.sender === 'user' ? 'user' : 'assistant',
+              content: m.text
+    }))
+}),
+
 
       if (!response.ok) {
         const errData = await response.json();
