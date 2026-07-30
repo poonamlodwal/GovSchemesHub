@@ -39,9 +39,8 @@ def ask_with_rag_stream(question: str, n_results: int = 5, filter_document_type:
 
     try:
         chunks = search(question, n_results=n_results, filter_document_type=filter_document_type)
-    except Exception as e:
-        yield {"error": f"Error querying vector store: {str(e)}"}
-        return
+    except Exception:
+        chunks = []
 
     sources = []
     context_blocks = []
