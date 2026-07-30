@@ -1,11 +1,11 @@
-from vector_store import search
+from vector_store import search, has_chunks
 from llm_api_provider import ask_ai
 
 def ask_with_rag(question: str, n_results: int = 5, filter_document_type: str = None):
     try:
-        chunks = search(question, n_results=n_results, filter_document_type=filter_document_type)
-    except Exception as e:
-        return f"Error querying vector store: {str(e)}"
+        chunks = search(question, n_results=n_results, filter_document_type=filter_document_type) if has_chunks() else []
+    except Exception:
+        chunks = []
 
     if not chunks:
         return "No relevant information found in the documents."
@@ -37,10 +37,12 @@ ANSWER (cite sources like [Source 1], [Source 2]):"""
 
 def ask_with_rag_stream(question: str, n_results: int = 5, filter_document_type: str = None, history: list = None):
 
-    try:
-        chunks = search(question, n_results=n_results, filter_document_type=filter_document_type)
-    except Exception:
-        chunks = []
+    chunks = []
+    if has_chunks():
+        try:
+            chunks = search(question, n_results=n_results, filter_document_type=filter_document_type)
+        except Exception:
+            chunks = []
 
     sources = []
     context_blocks = []

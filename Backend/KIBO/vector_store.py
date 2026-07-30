@@ -38,11 +38,20 @@ def add_chunks(chunks: list[dict]):
         metadatas=metadatas,
     )
 
+def has_chunks() -> bool:
+    try:
+        return _collection.count() > 0
+    except Exception:
+        return False
+
 def search(query: str, n_results: int = 5, filter_document_type: str = None):
     """
     Embeds the query and finds the closest matching chunks.
     Optionally filter by document_type.
     """
+    if not has_chunks():
+        return []
+
     query_embedding = embed_text(query)
 
     where_filter = {"document_type": filter_document_type} if filter_document_type else None
@@ -54,10 +63,11 @@ def search(query: str, n_results: int = 5, filter_document_type: str = None):
     )
 
     matches = []
-    for i in range(len(results["ids"][0])):
-        matches.append({
-            "text": results["documents"][0][i],
-            "metadata": results["metadatas"][0][i],
-            "distance": results["distances"][0][i],  # lower = more similar
-        })
+    if results and results.get("ids") and len(results["ids"]) > 0:
+        for i in range(len(results["ids"][0])):
+            matches.append({
+                "text": results["documents"][0][i],
+                "metadata": results["metadatas"][0][i],
+                "distance": results["distances"][0][i],  # lower = more similar
+            })
     return matches
