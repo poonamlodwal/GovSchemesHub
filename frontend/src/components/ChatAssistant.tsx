@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { MessageSquare, X, Send, Sparkles, Bot, User, Paperclip, FileText, Loader2 } from 'lucide-react';
 
-const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:5000';
+const API_BASE = import.meta.env.VITE_API_BASE || 'https://govschemeshub-2.onrender.com';
 
 interface Source {
   id: number;
@@ -31,8 +31,16 @@ export function ChatAssistant() {
   const [input, setInput] = useState('');
   const [typing, setTyping] = useState(false);
   const [uploading, setUploading] = useState(false);
+  const [serverWarmed, setServerWarmed] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Pre-warm backend when component mounts or opens
+  useEffect(() => {
+    fetch(`${API_BASE}/api/test`)
+      .then(() => setServerWarmed(true))
+      .catch(() => {});
+  }, [open]);
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -90,6 +98,27 @@ export function ChatAssistant() {
     }
   };
 
+  const fetchWithRetry = async (url: string, options: RequestInit, retries = 2, delayMs = 4000, onRetry?: (attempt: number) => void): Promise<Response> => {
+    for (let attempt = 0; attempt <= retries; attempt++) {
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 45000); // 45s per attempt for Render cold starts
+        
+        const response = await fetch(url, {
+          ...options,
+          signal: controller.signal,
+        });
+        clearTimeout(timeoutId);
+        return response;
+      } catch (err: any) {
+        if (attempt === retries) throw err;
+        if (onRetry) onRetry(attempt + 1);
+        await new Promise(res => setTimeout(res, delayMs));
+      }
+    }
+    throw new Error('Maximum retries reached');
+  };
+
   const sendMessage = async (text: string) => {
     if (!text.trim()) return;
 
@@ -102,27 +131,46 @@ export function ChatAssistant() {
     setTyping(true);
 
     try {
-      const response = await fetch(`${API_BASE}/api/query`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
+      const response = await fetchWithRetry(
+        `${API_BASE}/api/query`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            question: text,
+            history: messages
+              .filter(m => m.sender !== 'system' && m.text)
+              .slice(-6)
+              .map(m => ({
+                role: m.sender === 'user' ? 'user' : 'assistant',
+                content: m.text
+              }))
+          }),
         },
-        body: JSON.stringify({
-          question: text,
-          history: messages
-            .filter(m => m.sender !== 'system' && m.text)
-            .slice(-6)
-            .map(m => ({
-              role: m.sender === 'user' ? 'user' : 'assistant',
-              content: m.text
-            }))
-        }),
-      });
+        2,
+        4000,
+        (attempt) => {
+          setMessages((prev) =>
+            prev.map((m) =>
+              m.id === botMsgId
+                ? { ...m, text: `⚡ Server is waking up (Render free tier taking ~20s)... Retrying (${attempt}/2)` }
+                : m
+            )
+          );
+        }
+      );
 
       if (!response.ok) {
-        const errData = await response.json();
-        throw new Error(errData.error || 'Server error occurred');
+        const errData = await response.json().catch(() => ({}));
+        throw new Error(errData.error || `Server returned HTTP ${response.status}`);
       }
+
+      // Reset bot message text before streaming starts
+      setMessages((prev) =>
+        prev.map((m) => (m.id === botMsgId ? { ...m, text: '' } : m))
+      );
 
       const reader = response.body?.getReader();
       const decoder = new TextDecoder();

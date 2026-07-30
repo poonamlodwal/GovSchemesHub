@@ -93,7 +93,10 @@ def query_rag():
         except Exception as e:
             yield f"event: error\ndata: {json.dumps({'error': str(e)})}\n\n"
 
-    return Response(sse_generator(), mimetype="text/event-stream")
+    res = Response(sse_generator(), mimetype="text/event-stream")
+    res.headers["Cache-Control"] = "no-cache"
+    res.headers["X-Accel-Buffering"] = "no"
+    return res
 
 # Upload Document API
 @app.route("/api/upload", methods=["POST"])
