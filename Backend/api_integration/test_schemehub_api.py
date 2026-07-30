@@ -6,8 +6,12 @@ Run tests with: pytest test_schemehub_api.py -v
 
 import pytest
 from unittest.mock import Mock, patch, MagicMock
-from Backend.api_integration.api_client import SchemHubAPIClient, SchemHubAPIError
-from Backend.api_integration.endpoint import SchemHubConfig
+try:
+    from api_client import SchemHubAPIClient, SchemHubAPIError
+    from endpoint import SchemHubConfig
+except ImportError:
+    from Backend.api_integration.api_client import SchemHubAPIClient, SchemHubAPIError
+    from Backend.api_integration.endpoint import SchemHubConfig
 
 
 # ============================================================================
@@ -20,11 +24,11 @@ class TestClientInitialization:
     def test_init_with_api_key(self):
         """Test initialization with API key authentication"""
         client = SchemHubAPIClient(
-            base_url="https://schemehub-a.netlify.app",
+            base_url="https://schemeshub.netlify.app",
             auth_type="api_key",
             api_key="test-key"
         )
-        assert client.base_url == "https://govschemeshub-2.onrender.com"
+        assert client.base_url == "https://schemeshub.netlify.app"
         assert client.auth_type == "api_key"
         assert client.timeout == 30
         client.close()
@@ -110,7 +114,7 @@ class TestURLBuilding:
             api_key="test-key"
         )
         url = client._build_url("/v1/schemas")
-        assert url == "https://api.test.com/v1/schemas"
+        assert url == "https://govschemeshub-2.onrender.com/v1/schemas"
         client.close()
     
     def test_build_url_without_leading_slash(self):
@@ -121,7 +125,7 @@ class TestURLBuilding:
             api_key="test-key"
         )
         url = client._build_url("v1/schemas")
-        assert url == "https://api.test.com/v1/schemas"
+        assert url == "https://govschemeshub-2.onrender.com/v1/schemas"
         client.close()
     
     def test_build_url_with_trailing_slash(self):
@@ -143,7 +147,7 @@ class TestURLBuilding:
 class TestAPIRequests:
     """Tests for API request methods"""
     
-    @patch('schemehub_api_client.requests.Session.get')
+    @patch('api_client.requests.Session.get')
     def test_get_request(self, mock_get):
         """Test GET request"""
         mock_response = Mock()
@@ -163,7 +167,7 @@ class TestAPIRequests:
         mock_get.assert_called_once()
         client.close()
     
-    @patch('schemehub_api_client.requests.Session.post')
+    @patch('api_client.requests.Session.post')
     def test_post_request(self, mock_post):
         """Test POST request"""
         mock_response = Mock()
@@ -183,7 +187,7 @@ class TestAPIRequests:
         mock_post.assert_called_once()
         client.close()
     
-    @patch('schemehub_api_client.requests.Session.put')
+    @patch('api_client.requests.Session.put')
     def test_put_request(self, mock_put):
         """Test PUT request"""
         mock_response = Mock()
@@ -203,7 +207,7 @@ class TestAPIRequests:
         mock_put.assert_called_once()
         client.close()
     
-    @patch('schemehub_api_client.requests.Session.patch')
+    @patch('api_client.requests.Session.patch')
     def test_patch_request(self, mock_patch):
         """Test PATCH request"""
         mock_response = Mock()
@@ -223,7 +227,7 @@ class TestAPIRequests:
         mock_patch.assert_called_once()
         client.close()
     
-    @patch('schemehub_api_client.requests.Session.delete')
+    @patch('api_client.requests.Session.delete')
     def test_delete_request(self, mock_delete):
         """Test DELETE request"""
         mock_response = Mock()
@@ -251,7 +255,7 @@ class TestAPIRequests:
 class TestErrorHandling:
     """Tests for error handling"""
     
-    @patch('schemehub_api_client.requests.Session.get')
+    @patch('api_client.requests.Session.get')
     def test_api_error_401(self, mock_get):
         """Test handling of 401 Unauthorized error"""
         mock_response = Mock()
@@ -272,7 +276,7 @@ class TestErrorHandling:
         assert exc_info.value.status_code == 401
         client.close()
     
-    @patch('schemehub_api_client.requests.Session.get')
+    @patch('api_client.requests.Session.get')
     def test_api_error_404(self, mock_get):
         """Test handling of 404 Not Found error"""
         mock_response = Mock()
@@ -293,7 +297,7 @@ class TestErrorHandling:
         assert exc_info.value.status_code == 404
         client.close()
     
-    @patch('schemehub_api_client.requests.Session.get')
+    @patch('api_client.requests.Session.get')
     def test_api_error_500(self, mock_get):
         """Test handling of 500 Internal Server Error"""
         mock_response = Mock()
@@ -378,7 +382,7 @@ class TestConfiguration:
             auth_type="api_key",
             api_key=None
         )
-        with pytest.raises(ValueError, match="SCHEMEHUB_API_KEY is required"):
+        with pytest.raises(ValueError, match="GOV_API_KEY is required"):
             config.validate()
 
 
@@ -418,8 +422,8 @@ class TestSchemHubAPIError:
 class TestIntegration:
     """Integration-like tests"""
     
-    @patch('schemehub_api_client.requests.Session.get')
-    @patch('schemehub_api_client.requests.Session.post')
+    @patch('api_client.requests.Session.get')
+    @patch('api_client.requests.Session.post')
     def test_workflow_create_and_get(self, mock_post, mock_get):
         """Test workflow: create schema then get it"""
         # Mock POST response for creation

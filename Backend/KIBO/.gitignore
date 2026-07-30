@@ -1,4 +1,3 @@
-@"
 # Python
 __pycache__/
 *.pyc
@@ -13,4 +12,3 @@ venv/
 
 # Node
 node_modules/
-"@ | Out-File -FilePath .gitignore -Encoding utf8

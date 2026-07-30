@@ -12,7 +12,7 @@ class SchemHubConfig:
     """Configuration for SchemHub API client"""
     
     # API Base Configuration
-    base_url: str = os.getenv("SCHEMEHUB_BASE_URL", "https://schemehub-a.netlify.app")
+    base_url: str = os.getenv("SCHEMEHUB_BASE_URL", "https://schemeshub.netlify.app")
     
     # Authentication Configuration
     auth_type: str = os.getenv("SCHEMEHUB_AUTH_TYPE", "api_key").lower()

@@ -8,8 +8,10 @@ def run_ingestion(folder="docs"):
         print(f"Folder '{folder}' does not exist.")
         return
 
+    allowed_exts = {".txt", ".pdf", ".docx", ".xlsx", ".xls", ".csv", ".md"}
     for filename in os.listdir(folder):
-        if not filename.endswith(".txt"):
+        ext = os.path.splitext(filename)[1].lower()
+        if ext not in allowed_exts:
             continue
         path = os.path.join(folder, filename)
         extracted = extract_file(path)

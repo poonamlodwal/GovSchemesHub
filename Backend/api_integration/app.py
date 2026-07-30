@@ -5,8 +5,6 @@ from flask import Flask, jsonify, request, Response
 from flask_cors import CORS
 from dotenv import load_dotenv, find_dotenv
 from werkzeug.utils import secure_filename
-from flask import Flask
-from flask_cors import CORS
 
 
 current_dir = os.path.dirname(os.path.abspath(__file__))

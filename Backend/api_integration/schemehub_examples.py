@@ -18,7 +18,7 @@ def example_api_key_auth():
     print("\n=== Example 1: API Key Authentication ===\n")
     
     client = SchemHubAPIClient(
-        base_url="https://schemehub-a.netlify.app",
+        base_url="https://schemeshub.netlify.app",
         auth_type="api_key",
         api_key="Gov_API_KEY"
     )
@@ -47,7 +47,7 @@ def example_bearer_token_auth():
     print("\n=== Example 2: Bearer Token Authentication ===\n")
     
     client = SchemHubAPIClient(
-        base_url="https://schemehub-a.netlify.app",
+        base_url="https://schemeshub.netlify.app",
         auth_type="bearer",
         bearer_token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
     )
@@ -72,7 +72,7 @@ def example_basic_auth():
     print("\n=== Example 3: Basic Authentication ===\n")
     
     client = SchemHubAPIClient(
-        base_url="https://schemehub-a.netlify.app",
+        base_url="https://schemeshub.netlify.app",
         auth_type="basic",
         username="user@example.com",
         password="password123"
@@ -132,7 +132,7 @@ def example_context_manager():
     
     # Context manager automatically closes the session
     with SchemHubAPIClient(
-        base_url="https://schemehub-a.netlify.app",
+        base_url="https://schemeshub.netlify.app",
         auth_type="api_key",
         api_key="Gov_API_KEY"
     ) as client:
@@ -154,7 +154,7 @@ def example_create_schema():
     print("\n=== Example 6: Create Schema ===\n")
     
     with SchemHubAPIClient(
-        base_url="https://schemehub-a.netlify.app",
+        base_url="https://schemeshub.netlify.app",
         auth_type="api_key",
         api_key="Gov_API_KEY"
     ) as client:
@@ -190,7 +190,7 @@ def example_update_schema(schema_id: str):
     print(f"\n=== Example 7: Update Schema {schema_id} ===\n")
     
     with SchemHubAPIClient(
-        base_url="https://schemehub-a.netlify.app",
+        base_url="https://schemeshub.netlify.app",
         auth_type="api_key",
         api_key="Gov_API_KEY"
     ) as client:
@@ -223,7 +223,7 @@ def example_patch_schema(schema_id: str):
     print(f"\n=== Example 8: Patch Schema {schema_id} ===\n")
     
     with SchemHubAPIClient(
-        base_url="https://schemehub-a.netlify.app",
+        base_url="https://schemeshub.netlify.app",
         auth_type="api_key",
         api_key="GoV_API_KEY"
     ) as client:
@@ -249,7 +249,7 @@ def example_delete_schema(schema_id: str):
     print(f"\n=== Example 9: Delete Schema {schema_id} ===\n")
     
     with SchemHubAPIClient(
-        base_url="https://schemehub-a.netlify.app",
+        base_url="https://schemeshub.netlify.app",
         auth_type="api_key",
         api_key="Gov_API_KEY"
     ) as client:
@@ -271,7 +271,7 @@ def example_error_handling():
     print("\n=== Example 10: Error Handling ===\n")
     
     with SchemHubAPIClient(
-        base_url="https://schemehub-a.netlify.app",
+        base_url="https://schemeshub.netlify.app",
         auth_type="api_key",
         api_key="invalid-api-key"
     ) as client:
@@ -297,7 +297,7 @@ def example_paginated_requests():
     print("\n=== Example 11: Paginated Requests ===\n")
     
     with SchemHubAPIClient(
-        base_url="https://schemehub-a.netlify.app",
+        base_url="https://schemeshub.netlify.app",
         auth_type="api_key",
         api_key="Gov_API_KEY"
     ) as client:
@@ -338,7 +338,7 @@ def example_custom_headers():
     print("\n=== Example 12: Custom Headers ===\n")
     
     with SchemHubAPIClient(
-        base_url="https://schemehub-a.netlify.app",
+        base_url="https://schemeshub.netlify.app",
         auth_type="api_key",
         api_key="Gov_API_KEY"
     ) as client:

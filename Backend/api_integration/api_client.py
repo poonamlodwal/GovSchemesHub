@@ -1,9 +1,18 @@
 import requests
 import logging
 from typing import Optional, Dict, Any
-from requests.auth import HTTPBasicAuth, HTTPBearerAuth
+from requests.auth import HTTPBasicAuth, AuthBase
 from urllib.parse import urljoin
 import json
+
+# Custom HTTPBearerAuth helper since requests.auth does not export HTTPBearerAuth
+class HTTPBearerAuth(AuthBase):
+    def __init__(self, token: str):
+        self.token = token
+
+    def __call__(self, r):
+        r.headers["Authorization"] = f"Bearer {self.token}"
+        return r
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
