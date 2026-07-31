@@ -221,6 +221,38 @@ export function ChatAssistant() {
         }
       }
     } catch (error: any) {
+      // Fallback to standard JSON endpoint if SSE streaming encounters issues
+      try {
+        const fallbackRes = await fetch(`${API_BASE}/api/query_json`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            question: text,
+            history: messages
+              .filter(m => m.sender !== 'system' && m.text)
+              .slice(-6)
+              .map(m => ({
+                role: m.sender === 'user' ? 'user' : 'assistant',
+                content: m.text
+              }))
+          }),
+        });
+
+        if (fallbackRes.ok) {
+          const data = await fallbackRes.json();
+          setMessages((prev) =>
+            prev.map((m) =>
+              m.id === botMsgId
+                ? { ...m, text: data.answer || 'No response received.', sources: data.sources }
+                : m
+            )
+          );
+          return;
+        }
+      } catch (fallbackErr) {
+        // Fallback error handled below
+      }
+
       setMessages((prev) =>
         prev.map((m) =>
           m.id === botMsgId

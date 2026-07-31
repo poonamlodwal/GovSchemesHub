@@ -102,6 +102,34 @@ def query_rag():
     res.headers["X-Accel-Buffering"] = "no"
     return res
 
+# Query RAG API (JSON payload fallback)
+@app.route("/api/query_json", methods=["POST"])
+def query_rag_json():
+    data = request.get_json(silent=True) or {}
+    question = data.get("question")
+    history = data.get("history", [])
+    
+    if not question or not question.strip():
+        return jsonify({"error": "Missing or empty 'question' in request body"}), 400
+        
+    try:
+        sources = []
+        answer_text = ""
+        for event_data in ask_with_rag_stream(question, history=history):
+            if "error" in event_data:
+                return jsonify({"error": event_data["error"]}), 500
+            elif "sources" in event_data:
+                sources = event_data["sources"]
+            elif "text" in event_data:
+                answer_text += event_data["text"]
+                
+        return jsonify({
+            "answer": answer_text,
+            "sources": sources
+        }), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 # Upload Document API
 @app.route("/api/upload", methods=["POST"])
 def upload_file():
