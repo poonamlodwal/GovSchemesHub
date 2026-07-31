@@ -8,7 +8,7 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 db_path = os.path.abspath(os.path.join(current_dir, "..", "data", "chroma_db"))
 
 _chroma_client = chromadb.PersistentClient(path=db_path)
-_collection = _chroma_client.get_or_create_collection(name="gov_schemes")
+_collection = _chroma_client.get_or_create_collection(name="gov_schemes", embedding_function=None)
 
 def add_chunks(chunks: list[dict]):
     """

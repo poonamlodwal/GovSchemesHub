@@ -36,12 +36,15 @@ export function ChatAssistant() {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Pre-warm backend when component mounts or opens
-  useEffect(() => {
-    fetch(`${API_BASE}/api/test`)
-      .then(() => setServerWarmed(true))
-      .catch(() => {});
+   useEffect(() => {
+    if (open) {
+      fetch(`${API_BASE}/`)
+        .then(() => setServerWarmed(true))
+        .catch(() => setServerWarmed(false));
+    }
   }, [open]);
 
+  
   useEffect(() => {
     if (scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;

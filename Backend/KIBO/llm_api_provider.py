@@ -19,7 +19,7 @@ def get_client():
         raise ValueError("Backend missing GEMINI_API_KEY or GOV_API_KEY environment variable. Please set it in Render Dashboard -> Environment.")
     return genai.Client(api_key=api_key)
 
-MODEL_NAME = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+MODEL_NAME = os.getenv("GEMINI_MODEL", "gemini-2.0-flash")
 
 def ask_ai(prompt: str) -> str:
     client = get_client()
@@ -31,7 +31,7 @@ def ask_ai(prompt: str) -> str:
         return response.text
     except Exception:
         response = client.models.generate_content(
-            model="gemini-2.0-flash",
+            model="gemini-1.5-flash",
             contents=prompt
         )
         return response.text
@@ -39,7 +39,7 @@ def ask_ai(prompt: str) -> str:
 def embed_text(text: str) -> list[float]:
     client = get_client()
     result = client.models.embed_content(
-        model="gemini-embedding-001",
+        model="text-embedding-004",
         contents=text
     )
     return result.embeddings[0].values

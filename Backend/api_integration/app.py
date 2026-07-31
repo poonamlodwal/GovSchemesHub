@@ -60,8 +60,12 @@ def allowed_file(filename):
 
 # Home route
 @app.route("/")
+@app.route("/api/health")
 def home():
-    return "Backend is running 🚀"
+    return jsonify({
+        "status": "online",
+        "message": "Backend service is running 🚀"
+    }), 200
 
 # Test API
 @app.route("/api/test")
@@ -136,14 +140,31 @@ def upload_file():
     return jsonify({"error": f"Invalid file extension. Allowed: {', '.join(ALLOWED_EXTENSIONS)}"}), 400
 
 # Schemes API
-@app.route("/api/schemes")
+# Backend/api_integration/app.py
+@app.route("/api/schemes", methods=["GET"])
 def schemes():
+    # Production me aap ise database se fetch kar sakte hain
     return jsonify({
+        "status": "success",
         "schemes": [
-            {"name": "PM Kisan", "benefit": "₹6000/year"},
-            {"name": "Ayushman Bharat", "benefit": "Health insurance"}
+            {
+                "id": "pm-kisan",
+                "title": "Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)",
+                "category": "farmers",
+                "benefits": "₹6,000 per year in three installments",
+                "eligibility": ["Must be a landholding farmer family"],
+                "officialLink": "https://pmkisan.gov.in"
+            },
+            {
+                "id": "ayushman-bharat",
+                "title": "Ayushman Bharat PM-JAY",
+                "category": "healthcare",
+                "benefits": "Health cover up to ₹5 lakh per family per year",
+                "eligibility": ["Low income families based on SECC data"],
+                "officialLink": "https://pmjay.gov.in"
+            }
         ]
-    })
+    }), 200
 
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=5000, debug=True)
