@@ -1,6 +1,7 @@
 import os
 import sys
 import json
+from datetime import datetime, timezone
 from flask import Flask, jsonify, request, Response
 from flask_cors import CORS
 from dotenv import load_dotenv, find_dotenv
@@ -58,13 +59,16 @@ def allowed_file(filename):
     ext = os.path.splitext(filename)[1].lower()
     return ext in ALLOWED_EXTENSIONS
 
-# Home route
+# Health check routes
 @app.route("/")
+@app.route("/health")
 @app.route("/api/health")
-def home():
+def health_check():
     return jsonify({
+        "success": True,
         "status": "online",
-        "message": "Backend service is running 🚀"
+        "message": "Server is healthy 🚀",
+        "timestamp": datetime.now(timezone.utc).isoformat()
     }), 200
 
 # Test API
