@@ -58,9 +58,9 @@ class QueryRequest(BaseModel):
 
 
 # Health check routes
-@app.get("/")
-@app.get("/health")
-@app.get("/api/health")
+@app.api_route("/", methods=["GET", "HEAD"])
+@app.api_route("/health", methods=["GET", "HEAD"])
+@app.api_route("/api/health", methods=["GET", "HEAD"])
 async def health_check():
     return {
         "success": True,
