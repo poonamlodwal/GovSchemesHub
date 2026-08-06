@@ -1,11 +1,14 @@
 import os
 import sys
 import json
+import shutil
 from datetime import datetime, timezone
-from flask import Flask, jsonify, request, Response
-from flask_cors import CORS
+from typing import List, Optional, Any
+from fastapi import FastAPI, UploadFile, File, HTTPException
+from fastapi.responses import JSONResponse, StreamingResponse
+from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
 from dotenv import load_dotenv, find_dotenv
-from werkzeug.utils import secure_filename
 
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -28,65 +31,59 @@ from exctractors import extract_file
 from chunker import chunk_document
 from vector_store import add_chunks
 
-app = Flask(__name__)
+app = FastAPI(
+    title="GovSchemesHub API",
+    description="FastAPI Backend for Government Schemes RAG and Assistance",
+    version="1.0.0"
+)
+
+# Configure CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Configure upload directory
 UPLOAD_FOLDER = os.path.abspath(os.path.join(current_dir, "..", "data", "uploads"))
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max upload file size
 ALLOWED_EXTENSIONS = {'.pdf', '.txt', '.docx', '.xlsx', '.xls', '.csv'}
 
-CORS(app, resources={r"/*": {"origins": "*"}})
 
-@app.after_request
-def add_cors_headers(response):
-    origin = request.headers.get('Origin')
-    if origin:
-        response.headers['Access-Control-Allow-Origin'] = origin
-        response.headers['Access-Control-Allow-Credentials'] = 'true'
-    else:
-        response.headers['Access-Control-Allow-Origin'] = '*'
-    response.headers['Access-Control-Allow-Headers'] = 'Content-Type, Authorization, X-Requested-With'
-    response.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS'
-    return response
+class QueryRequest(BaseModel):
+    question: str
+    history: Optional[List[dict]] = []
 
-@app.route('/api/<path:path>', methods=['OPTIONS'])
-def options_handler(path):
-    return '', 200
-
-def allowed_file(filename):
-    ext = os.path.splitext(filename)[1].lower()
-    return ext in ALLOWED_EXTENSIONS
 
 # Health check routes
-@app.route("/")
-@app.route("/health")
-@app.route("/api/health")
-def health_check():
-    return jsonify({
+@app.get("/")
+@app.get("/health")
+@app.get("/api/health")
+async def health_check():
+    return {
         "success": True,
         "status": "online",
         "message": "Server is healthy 🚀",
         "timestamp": datetime.now(timezone.utc).isoformat()
-    }), 200
+    }
 
 # Test API
-@app.route("/api/test")
-def test():
-    return jsonify({"message": "API working!"})
+@app.get("/api/test")
+async def test():
+    return {"message": "API working!"}
 
 # Query RAG API (Streaming SSE)
-@app.route("/api/query", methods=["POST"])
-def query_rag():
-    data = request.get_json(silent=True) or {}
-    question = data.get("question")
-    history = data.get("history", [])
+@app.post("/api/query")
+async def query_rag(payload: QueryRequest):
+    question = payload.question
+    history = payload.history or []
     
     if not question or not question.strip():
-        return jsonify({"error": "Missing or empty 'question' in request body"}), 400
+        raise HTTPException(status_code=400, detail="Missing or empty 'question' in request body")
         
-    def sse_generator():
+    async def sse_generator():
         try:
             for event_data in ask_with_rag_stream(question, history=history):
                 if "error" in event_data:
@@ -101,82 +98,84 @@ def query_rag():
         except Exception as e:
             yield f"event: error\ndata: {json.dumps({'error': str(e)})}\n\n"
 
-    res = Response(sse_generator(), mimetype="text/event-stream")
-    res.headers["Cache-Control"] = "no-cache"
-    res.headers["X-Accel-Buffering"] = "no"
-    return res
+    return StreamingResponse(
+        sse_generator(),
+        media_type="text/event-stream",
+        headers={
+            "Cache-Control": "no-cache",
+            "X-Accel-Buffering": "no"
+        }
+    )
 
 # Query RAG API (JSON payload fallback)
-@app.route("/api/query_json", methods=["POST"])
-def query_rag_json():
-    data = request.get_json(silent=True) or {}
-    question = data.get("question")
-    history = data.get("history", [])
+@app.post("/api/query_json")
+async def query_rag_json(payload: QueryRequest):
+    question = payload.question
+    history = payload.history or []
     
     if not question or not question.strip():
-        return jsonify({"error": "Missing or empty 'question' in request body"}), 400
+        raise HTTPException(status_code=400, detail="Missing or empty 'question' in request body")
         
     try:
         sources = []
         answer_text = ""
         for event_data in ask_with_rag_stream(question, history=history):
             if "error" in event_data:
-                return jsonify({"error": event_data["error"]}), 500
+                raise HTTPException(status_code=500, detail=event_data["error"])
             elif "sources" in event_data:
                 sources = event_data["sources"]
             elif "text" in event_data:
                 answer_text += event_data["text"]
                 
-        return jsonify({
+        return {
             "answer": answer_text,
             "sources": sources
-        }), 200
+        }
+    except HTTPException:
+        raise
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        raise HTTPException(status_code=500, detail=str(e))
 
 # Upload Document API
-@app.route("/api/upload", methods=["POST"])
-def upload_file():
-    if 'file' not in request.files:
-        return jsonify({"error": "No file part in request"}), 400
-    
-    file = request.files['file']
-    if file.filename == '':
-        return jsonify({"error": "No file selected"}), 400
+@app.post("/api/upload")
+async def upload_file(file: UploadFile = File(...)):
+    filename = file.filename
+    if not filename:
+        raise HTTPException(status_code=400, detail="No file selected")
         
-    if file and allowed_file(file.filename):
-        filename = secure_filename(file.filename)
-        temp_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-        file.save(temp_path)
+    ext = os.path.splitext(filename)[1].lower()
+    if ext not in ALLOWED_EXTENSIONS:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Invalid file extension. Allowed: {', '.join(ALLOWED_EXTENSIONS)}"
+        )
+
+    temp_path = os.path.join(UPLOAD_FOLDER, filename)
+    try:
+        with open(temp_path, "wb") as buffer:
+            shutil.copyfileobj(file.file, buffer)
+            
+        extracted = extract_file(temp_path)
+        chunks = chunk_document(extracted)
+        add_chunks(chunks)
         
-        try:
-            # Process and ingest document into ChromaDB
-            extracted = extract_file(temp_path)
-            chunks = chunk_document(extracted)
-            add_chunks(chunks)
+        if os.path.exists(temp_path):
+            os.remove(temp_path)
             
-            # Clean up temporary uploaded file
-            if os.path.exists(temp_path):
-                os.remove(temp_path)
-                
-            return jsonify({
-                "message": f"Successfully ingested {len(chunks)} chunks",
-                "filename": filename,
-                "chunks_count": len(chunks)
-            }), 200
-        except Exception as e:
-            if os.path.exists(temp_path):
-                os.remove(temp_path)
-            return jsonify({"error": f"Failed to ingest file: {str(e)}"}), 500
-            
-    return jsonify({"error": f"Invalid file extension. Allowed: {', '.join(ALLOWED_EXTENSIONS)}"}), 400
+        return {
+            "message": f"Successfully ingested {len(chunks)} chunks",
+            "filename": filename,
+            "chunks_count": len(chunks)
+        }
+    except Exception as e:
+        if os.path.exists(temp_path):
+            os.remove(temp_path)
+        raise HTTPException(status_code=500, detail=f"Failed to ingest file: {str(e)}")
 
 # Schemes API
-# Backend/api_integration/app.py
-@app.route("/api/schemes", methods=["GET"])
-def schemes():
-    # Production me aap ise database se fetch kar sakte hain
-    return jsonify({
+@app.get("/api/schemes")
+async def schemes():
+    return {
         "status": "success",
         "schemes": [
             {
@@ -196,7 +195,9 @@ def schemes():
                 "officialLink": "https://pmjay.gov.in"
             }
         ]
-    }), 200
+    }
 
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=5000, debug=True)
+    import uvicorn
+    uvicorn.run("app:app", host="127.0.0.1", port=5000, reload=True)
+
