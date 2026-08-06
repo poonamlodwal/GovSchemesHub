@@ -22,13 +22,14 @@ def get_client():
 
 # Model fallback chain: try each model in order when quota is exceeded
 MODEL_FALLBACK_CHAIN = [
-    os.getenv("GEMINI_MODEL", "gemini-2.0-flash"),
-    "gemini-1.5-flash",
-    "gemini-1.5-flash-8b",
+    os.getenv("GEMINI_MODEL", "gemini-3.5-flash"),
+    "gemini-3.5-flash",
+    "gemini-3.5-flash-lite",
 ]
 
 def _is_quota_error(e: Exception) -> bool:
     """Check if the exception is a 429 quota exceeded error."""
+
     error_str = str(e)
     return "429" in error_str or "RESOURCE_EXHAUSTED" in error_str or "quota" in error_str.lower()
 
