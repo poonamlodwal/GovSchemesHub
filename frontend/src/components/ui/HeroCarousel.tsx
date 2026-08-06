@@ -1,12 +1,12 @@
 import { useState, useEffect, useCallback } from 'react';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import govscemes from "../../images/carousel.image/govscemes.jpg";
-import healthcare from "../../images/carousel.image/healthcare.webp";
-import farmer from "../../images/carousel.image/farmer.webp";
-import education from "../../images/carousel.image/education.webp";
-import entueneuurprinship from "../../images/carousel.image/entueneuurprinship.jpg";
-import oldpeople from "../../images/carousel.image/oldpeople.webp";
+import govscemes from "../../IMAGES/carousel.image/govscemes.jpg";
+import healthcare from "../../IMAGES/carousel.image/healthcare.webp";
+import farmer from "../../IMAGES/carousel.image/farmer.webp";
+import education from "../../IMAGES/carousel.image/education.webp";
+import entueneuurprinship from "../../IMAGES/carousel.image/entueneuurprinship.jpg";
+import oldpeople from "../../IMAGES/carousel.image/oldpeople.webp";
 interface CarouselSlide {
   image: string;
   title: string;
